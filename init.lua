@@ -436,8 +436,32 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         clangd = {},
+        -- for the html lsp to work you need to use nvm to install node, the following commands
+        -- will sort you out, do go to https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating
+        -- before blindly running them though, yes I'm talking to you future me
+        -- curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+        -- nvm install --lts
+        -- nvm use --lts
+        html = { filetypes = { 'html', 'twig', 'hbs', 'htmldjango' } },
         -- gopls = {},
-        pyright = {},
+        -- pyright = {},
+        pylsp = {
+          settings = {
+            pylsp = {
+              plugins = {
+                maccabe = { enabled = false },
+                flake8 = {
+                  enabled = true,
+                  ignore = { 'E203', 'W503', 'E501', 'C901' },
+                },
+                pycodestyle = {
+                  enabled = false,
+                  ignore = { 'E221', 'E501' },
+                },
+              },
+            },
+          },
+        },
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
