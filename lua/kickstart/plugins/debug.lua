@@ -26,6 +26,8 @@ return {
     'mfussenegger/nvim-dap',
     'mfussenegger/nvim-dap-python',
     'rogalmic/vscode-bash-debug',
+    'vadimcn/vscode-lldb',
+    'microsoft/vscode-cpptools',
   },
   config = function()
     local dap = require 'dap'
@@ -65,6 +67,8 @@ return {
         -- Update this to ensure that you have the debuggers for the langs you want
         'delve',
         'debugpy',
+        'codelldb',
+        'cpptools',
       },
     }
 
