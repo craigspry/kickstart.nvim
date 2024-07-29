@@ -69,6 +69,7 @@ return {
         'debugpy',
         'codelldb',
         'cpptools',
+        'cppdbg',
       },
     }
 
