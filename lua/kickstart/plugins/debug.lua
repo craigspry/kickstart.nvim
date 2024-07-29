@@ -26,6 +26,7 @@ return {
     'mfussenegger/nvim-dap',
     'mfussenegger/nvim-dap-python',
     'rogalmic/vscode-bash-debug',
+    'microsoft/debugpy',
     'vadimcn/vscode-lldb',
     'microsoft/vscode-cpptools',
   },
