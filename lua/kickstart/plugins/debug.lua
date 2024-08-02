@@ -23,8 +23,8 @@ return {
 
     -- Add your own debuggers here
     'leoluz/nvim-dap-go',
-    'mfussenegger/nvim-dap',
-    'mfussenegger/nvim-dap-python',
+    --'mfussenegger/nvim-dap',
+    --'mfussenegger/nvim-dap-python',
     'rogalmic/vscode-bash-debug',
     'microsoft/debugpy',
     'vadimcn/vscode-lldb',
