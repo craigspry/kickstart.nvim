@@ -22,7 +22,7 @@ return {
     'jay-babu/mason-nvim-dap.nvim',
 
     -- Add your own debuggers here
-    'leoluz/nvim-dap-go',
+    -- 'leoluz/nvim-dap-go',
     --'mfussenegger/nvim-dap',
     --'mfussenegger/nvim-dap-python',
     'rogalmic/vscode-bash-debug',
@@ -45,7 +45,6 @@ return {
       handlers = {
         function(config)
           -- all sources with no handler get passed here
-
           -- Keep original functionality
           require('mason-nvim-dap').default_setup(config)
         end,
@@ -66,7 +65,7 @@ return {
       -- online, please don't ask me how to install them :)
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want
-        'delve',
+        -- 'delve',
         'debugpy',
         'codelldb',
         'cpptools',
@@ -114,6 +113,6 @@ return {
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
     -- Install golang specific config
-    require('dap-go').setup()
+    -- require('dap-go').setup()
   end,
 }

@@ -448,6 +448,7 @@ require('lazy').setup({
         html = { filetypes = { 'html', 'twig', 'hbs', 'htmldjango' } },
         -- gopls = {},
         -- pyright = {},
+        -- csharp_ls = {},
         pylsp = {
           settings = {
             pylsp = {
