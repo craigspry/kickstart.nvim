@@ -458,6 +458,13 @@ require('lazy').setup({
             },
             provideFormatter = false, -- Turned this off because on save it woul split up lines
           },
+          settings = {
+            html = {
+              format = {
+                wrapLineLength = 0,
+              },
+            },
+          },
         },
         -- gopls = {},
         -- pyright = {},
