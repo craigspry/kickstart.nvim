@@ -49,6 +49,9 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -445,7 +448,17 @@ require('lazy').setup({
         -- curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
         -- nvm install --lts
         -- nvm use --lts
-        html = { filetypes = { 'html', 'twig', 'hbs', 'htmldjango' } },
+        html = {
+          filetypes = { 'html', 'twig', 'hbs', 'htmldjango' },
+          init_options = {
+            configurationSection = { 'html', 'css', 'javascript' },
+            embeddedLanguages = {
+              css = true,
+              javascript = true,
+            },
+            provideFormatter = false, -- Turned this off because on save it woul split up lines
+          },
+        },
         -- gopls = {},
         -- pyright = {},
         -- csharp_ls = {},
